@@ -51,4 +51,30 @@ th, td { padding:10px; text-align:center; }
     nav ul li { margin-left:0; margin-bottom:10px; }
     .landing h1 { font-size:36px; }
     .landing p { font-size:16px; }
+
+}.about-section {
+    padding: 40px;
+    background-color: #fff8f0;
+    text-align: center;
+}
+
+.about-section h2 {
+    color: #d35400;
+}
+
+.payment-box {
+    margin: 15px 0;
+}
+
+.payment-box button {
+    padding: 6px 12px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.payment-box button:hover {
+    background-color: #219150;
 }
