@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YEGNA BREAKFAST</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="logo">🇪🇹 YEGNA BREAKFAST</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu-section">Menu</a></li>
+        <li><a href="#cart-section">Order</a></li>
+        <li><a href="#admin-section">Admin</a></li>
+    </ul>
+</nav>
+
+<!-- Landing -->
+<section id="home" class="landing">
+    <div>
+        <h1>Welcome to YEGNA BREAKFAST</h1>
+        <p>Experience Authentic Ethiopian Cuisine</p>
+        <a href="#menu-section">Explore Menu</a>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about">
+    <h2>About Us</h2>
+    <p>Welcome to YEGNA BREAKFAST, where every meal is a journey into the heart of Ethiopia. 
+    Enjoy Doro Wat, Kitfo, Tibs, Shiro, Beyaynetu with fresh Injera and traditional drinks.</p>
+</section>
+
+<!-- Menu Drop-down Section -->
+<section id="menu-section">
+    <h2>Menu</h2>
+    <button id="menuBtn">Menu</button>
+    <div id="menuContent">
+        <ul id="menuList">
+            <!-- Menu items will be populated by JS -->
+        </ul>
+    </div>
+</section>
+
+<!-- Cart Section -->
+<section id="cart-section" class="cart-section">
+    <h2>Your Order</h2>
+    <input type="text" id="customerName" placeholder="Your Name" value="Guest Customer">
+    <input type="text" id="customerPhone" placeholder="Phone Number" maxlength="10">
+    <button id="deliveryBtn">Delivery?</button>
+    <input type="text" id="deliveryAddress" placeholder="Enter delivery address" style="display:none;">
+    <input type="text" id="orderNote" placeholder="Special notes (e.g., no salt)">
+    <ul id="cart-items"></ul>
+    <h4>Total: <span id="total">0</span> ETB</h4>
+    <button onclick="placeOrder()">Place Order</button>
+</section>
+
+<!-- Receipt Popup -->
+<div id="receipt"></div>
+
+<!-- Admin Dashboard -->
+<section id="admin-section">
+    <h2>Admin Dashboard</h2>
+    <input type="password" id="adminPass" placeholder="Enter admin password">
+    <button onclick="checkAdmin()">Login</button>
+    <div id="adminContent" style="display:none;">
+        <h3>New Orders Notifications: <span id="orderNotification">0</span></h3>
+        <table>
+            <thead>
+                <tr><th>Name</th><th>Phone</th><th>Total</th><th>Status</th><th>Delivery</th><th>Note</th></tr>
+            </thead>
+            <tbody id="adminOrders"></tbody>
+        </table>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+/* GENERAL STYLES */
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#fff; color:#333; }
+h2 { color:#006400; }
+button { cursor:pointer; }
+
+/* NAVIGATION */
+nav { background:#006400; color:white; display:flex; justify-content:space-between; padding:15px 40px; align-items:center; position:sticky; top:0; z-index:100; }
+nav ul { list-style:none; display:flex; margin:0; padding:0; }
+nav ul li { margin-left:20px; }
+nav ul li a { color:white; text-decoration:none; font-weight:bold; transition:0.3s; }
+nav ul li a:hover { color:#FFD700; }
+
+/* LANDING */
+.landing { height:100vh; background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1604908177522-0400b5a7c1e3'); background-size:cover; background-position:center; display:flex; justify-content:center; align-items:center; text-align:center; color:white; }
+.landing h1 { font-size:50px; margin-bottom:20px; }
+.landing p { font-size:20px; margin-bottom:30px; }
+.landing a { padding:12px 25px; background:#FFD700; color:black; text-decoration:none; font-weight:bold; border-radius:5px; transition:0.3s; }
+.landing a:hover { background:#C8102E; color:white; }
+
+/* MENU DROP-DOWN */
+#menuBtn { padding:12px 25px; background:#006400; color:white; border:none; border-radius:5px; margin-bottom:10px; transition:0.3s; }
+#menuBtn:hover { background:#C8102E; }
+#menuContent { max-height:0; overflow-y:auto; transition:max-height 0.5s ease; background:#f4f4f4; padding:0 20px; border-radius:5px; margin-bottom:20px; }
+#menuContent.show { max-height:500px; }
+#menuContent ul { list-style:none; padding:10px 0; margin:0; }
+#menuContent li { display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid #ccc; }
+#menuContent li button { margin-left:10px; padding:5px 10px; background:#006400; color:white; border:none; border-radius:4px; }
+#menuContent li button:hover { background:#C8102E; }
+
+/* CART SECTION */
+.cart-section { max-width:600px; margin:20px auto; background:#f9f9f9; padding:20px; border-radius:10px; text-align:left; }
+.cart-section input { width:48%; max-width:100%; padding:10px; margin:5px 1%; border:1px solid #ccc; border-radius:5px; box-sizing:border-box; }
+.cart-section ul { list-style:none; padding:0; }
+.cart-section li { margin:5px 0; }
+.cart-section button { padding:5px 10px; margin-left:5px; }
+
+/* RECEIPT POPUP */
+#receipt { display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:white; padding:30px; box-shadow:0 10px 30px rgba(0,0,0,0.5); z-index:1000; width:90%; max-width:400px; text-align:left; }
+#receipt button { margin-top:10px; background:#006400; color:white; padding:8px 15px; border:none; border-radius:4px; transition:0.3s; }
+#receipt button:hover { background:#C8102E; }
+
+/* ADMIN DASHBOARD */
+table { width:100%; border-collapse:collapse; margin-top:20px; }
+table, th, td { border:1px solid #ccc; }
+th, td { padding:10px; text-align:center; }
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    nav { flex-direction:column; }
+    nav ul { flex-direction:column; margin-top:10px; }
+    nav ul li { margin-left:0; margin-bottom:10px; }
+    .landing h1 { font-size:36px; }
+    .landing p { font-size:16px; }
+}
